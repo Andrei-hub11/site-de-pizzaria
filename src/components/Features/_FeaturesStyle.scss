@@ -1,0 +1,73 @@
+@import "../../utils/mixins/mixins";
+@import "/src/Theme/theme";
+
+.features {
+  @include for-size(smaller-phone) {
+    margin-top: 4.5rem;
+  }
+}
+
+.features__title {
+  @include for-size(smaller-phone) {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: $title-primary-font;
+    color: $primary-color;
+  }
+}
+
+.features__intro {
+  @include for-size(smaller-phone) {
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: $primary-font;
+    width: 30.15rem;
+  }
+}
+
+.features__container {
+  @include for-size(smaller-phone) {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    gap: 2.6rem;
+  }
+}
+
+.features__container__item {
+  @include for-size(smaller-phone) {
+    background: $primary-color;
+    width: 14.6rem;
+    height: 16rem;
+    border-radius: 3rem 0 3rem 0;
+  }
+}
+
+.features__container__item-icon {
+  @include for-size(smaller-phone) {
+    padding: 1.5rem 0 0 0.9rem;
+  }
+}
+
+.features__container__item-title {
+  @include for-size(smaller-phone) {
+    margin-top: 1.4rem;
+    font-family: $title-primary-font;
+    padding: 0 0 0 0.9rem;
+    font-weight: 600;
+  }
+}
+
+.features__container__item-information {
+  @include for-size(smaller-phone) {
+    margin: 1rem auto;
+    font-family: $primary-font;
+    font-size: 1rem;
+    color: $text-color;
+    width: 13rem;
+    word-break: break-word;
+  }
+}

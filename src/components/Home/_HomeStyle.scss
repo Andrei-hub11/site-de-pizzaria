@@ -1,0 +1,22 @@
+@import "/src/Theme/theme";
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22.3rem;
+  background: $background-color;
+}
+
+.home__container {
+  width: 36rem;
+}
+
+.home__container__inner {
+  display: flex;
+  justify-content: space-between;
+
+  & p {
+    color: $text-color;
+  }
+}
