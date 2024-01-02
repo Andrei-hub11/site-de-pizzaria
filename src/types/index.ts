@@ -1,19 +1,3 @@
-export type Theme = {
-  colors: {
-    primary: string;
-    text: string;
-    background: string;
-  };
-  breakpoints: {
-    smallerPhone: string;
-    phoneOnly: string;
-    tabletPortraitUp: string;
-    tabletLandscapeUp: string;
-    desktopUp: string;
-    bigDesktopUp: string;
-  };
-};
-
 export type Feature = {
   icon: string;
   title: string;
@@ -21,9 +5,41 @@ export type Feature = {
 };
 
 export type ButtonProps = {
-  $primary: boolean;
+  variant_key: string;
   onClick?: (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => void | undefined;
   $isUnique?: boolean;
+};
+
+export type Variants = {
+  [key: string]: () => React.ReactNode;
+};
+
+export type MenuItem = {
+  front: {
+    id: string;
+    item: {
+      imgSrc: string;
+      imgAlt: string;
+      title: string;
+      information: string;
+      control: {
+        price: string;
+        secondaryControl: {
+          imgAlt: string;
+          information: string;
+        };
+      };
+    };
+  };
+  back: {
+    card: {
+      title: string;
+      listItems: string[];
+      control: {
+        imgAlt: string;
+      };
+    };
+  };
 };

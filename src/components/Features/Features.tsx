@@ -1,4 +1,4 @@
-import { featuresData } from "../../constants/contants";
+import { featuresData } from "../../constants/constants";
 import "./_FeaturesStyle.scss";
 
 function Features() {
