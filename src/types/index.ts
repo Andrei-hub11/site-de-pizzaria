@@ -51,3 +51,12 @@ export type Reservation = {
   text: string;
   dropIcon: string;
 };
+
+export type listHomeIcons = {
+  alt: string;
+  src: string;
+};
+
+export type IconsList = listHomeIcons & {
+  path: string;
+};

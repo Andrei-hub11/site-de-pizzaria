@@ -3,6 +3,7 @@
 
 .reserve {
   @include for-size(smaller-phone) {
+    overflow: hidden;
     &__title {
       @include primary-title-styles(2.4rem);
     }

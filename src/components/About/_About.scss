@@ -1,0 +1,40 @@
+@import "../../utils/mixins/mixins";
+@import "/src/Theme/theme";
+
+.about {
+  @include for-size(smaller-phone) {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    &__container-img {
+      width: 16.3rem;
+      height: 11.8rem;
+      background: $primary-color;
+      border-radius: 2rem 0 2rem 0;
+    }
+
+    &__container-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      margin-right: auto;
+      @include primary-title-styles(2.4rem);
+    }
+
+    &__text {
+      font-family: $primary-font;
+      font-size: 1rem;
+      width: 16.8rem;
+    }
+  }
+}

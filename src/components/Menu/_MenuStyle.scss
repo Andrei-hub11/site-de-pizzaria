@@ -1,0 +1,184 @@
+@import "../../utils/mixins/mixins";
+@import "/src/Theme/theme";
+
+.menu {
+  @include for-size(smaller-phone) {
+    margin-top: 4.5rem;
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: $title-primary-font;
+      color: $primary-color;
+      height: 6rem;
+      width: 100%;
+      padding: 0 1rem;
+      background: $secondary-color;
+      gap: 1.4rem;
+    }
+
+    &__control {
+      margin: 2rem auto;
+      width: 33.6rem;
+      height: 4rem;
+      background: $secondary-color;
+    }
+  }
+}
+
+.menu__nav-btns {
+  @include for-size(smaller-phone) {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+.menu__options {
+  @include for-size(smaller-phone) {
+    margin-top: 3.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+.menu__options--pespective {
+  @include for-size(smaller-phone) {
+    position: relative;
+    width: 16rem;
+    height: 25.6rem;
+  }
+}
+
+.menu__options__front {
+  @include for-size(smaller-phone) {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.55s linear;
+  }
+}
+
+.menu__options__front__item {
+  @include for-size(smaller-phone) {
+    width: 16rem;
+    height: 25.6rem;
+    background: $secondary-color;
+  }
+}
+
+.menu__options__front__item-img {
+  @include for-size(smaller-phone) {
+    width: 15.2rem;
+    height: 8.7rem;
+    padding: 0.4rem;
+    border-radius: 2rem;
+
+    & img {
+      height: 8.7rem;
+      width: 15.2rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 2rem;
+    }
+  }
+}
+
+.menu__options__front-title {
+  @include for-size(smaller-phone) {
+    text-align: center;
+    margin-top: 1.6rem;
+    font-family: $title-secondary-font;
+  }
+}
+
+.menu__options__front-information {
+  @include for-size(smaller-phone) {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.4rem 0.3rem;
+    font-family: $primary-font;
+  }
+}
+
+.menu__options__front__control {
+  @include for-size(smaller-phone) {
+    position: absolute;
+    bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+
+    &-price {
+      font-size: 1.2rem;
+      font-family: $primary-font;
+    }
+
+    &-information {
+      font-size: 1.2rem;
+      font-family: $primary-font;
+    }
+  }
+}
+
+.menu__options__front__control--secondary {
+  @include for-size(smaller-phone) {
+    position: absolute;
+    bottom: 1rem;
+    margin-left: 0.4rem;
+    align-items: center;
+    justify-content: unset;
+  }
+}
+
+.menu__options__back {
+  @include for-size(smaller-phone) {
+    position: absolute;
+    width: 16rem;
+    height: 25.6rem;
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(-180deg);
+    transition: transform 0.55s linear;
+    background: $secondary-color;
+  }
+}
+
+.menu__options__back__card {
+  @include for-size(smaller-phone) {
+    position: relative;
+    height: 100%;
+    &__list {
+      margin: 1rem auto;
+      width: 100%;
+      padding: 0 3rem;
+    }
+
+    &__list-item {
+      font-size: 1.2rem;
+      color: $primary-color;
+    }
+  }
+}
+
+.back--active .menu__options__front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.back--active .menu__options__back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back__control--variant {
+  @include for-size(smaller-phone) {
+    position: absolute;
+    bottom: 2rem;
+    margin-left: 0.4rem;
+    width: unset;
+  }
+}

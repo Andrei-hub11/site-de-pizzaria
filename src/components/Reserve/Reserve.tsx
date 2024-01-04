@@ -8,7 +8,7 @@ function Reserve() {
   const { isOpen, handleChangeDrpdown } = useReserveLogic();
 
   return (
-    <section className="reserve">
+    <section className="reserve" id="reserve">
       <h1 className="reserve__title">Fazer Reserva</h1>
       <div className="reserve__container">
         {reservations.map((reserve) => (

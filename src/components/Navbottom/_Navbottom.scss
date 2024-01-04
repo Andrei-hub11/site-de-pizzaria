@@ -1,0 +1,17 @@
+@import "../../utils/mixins/mixins";
+@import "/src/Theme/theme";
+
+.navbottom {
+  @include for-size(smaller-phone) {
+    position: sticky;
+    bottom: 1rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    width: 29.8rem;
+    gap: 2rem;
+    border-radius: 0.5rem;
+  }
+}

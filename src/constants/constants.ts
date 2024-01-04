@@ -1,4 +1,10 @@
-import { Feature, MenuItem, Reservation } from "../types";
+import {
+  Feature,
+  IconsList,
+  MenuItem,
+  Reservation,
+  listHomeIcons,
+} from "../types";
 
 import PizzaIcon from "../assets/icons/la_pizza-slice.svg";
 import DeliveryIcon from "../assets/icons/carbon_delivery-parcel.svg";
@@ -15,6 +21,65 @@ import PeopleIcon from "../assets/icons/icon-park-solid_people.svg";
 import DropIcon from "../assets/icons/formkit_down.svg";
 import CalendarIcon from "../assets/icons/clarity_calendar-solid.svg";
 import ClockIcon from "../assets/icons/bi_clock-fill.svg";
+
+import InstagramIcon from "../assets/icons/ri_instagram-fill.svg";
+import WhatsAppIcon from "../assets/icons/uil_whatsapp-alt.svg";
+import FacebookIcon from "../assets/icons/uil_facebook.svg";
+
+import HomeIcon from "../assets/icons/ic_round-home.svg";
+import FeaturesIcon from "../assets/icons/eos-icons_service-instance.svg";
+import FoodIcon from "../assets/icons/fluent_food-24-filled.svg";
+import ReserveIcon from "../assets/icons/tabler_clock-filled1.svg";
+import BookIcon from "../assets/icons/tabler_book-filled.svg";
+import CarIcon from "../assets/icons/material-symbols_shopping-cart-sharp.svg";
+
+export const homeIcons: listHomeIcons[] = [
+  {
+    alt: "ícone do instagram",
+    src: InstagramIcon,
+  },
+  {
+    alt: "ícone do whatsapp",
+    src: WhatsAppIcon,
+  },
+  {
+    alt: "ícone do facebook",
+    src: FacebookIcon,
+  },
+];
+
+export const navIcons: IconsList[] = [
+  {
+    alt: "ícone do home",
+    src: HomeIcon,
+    path: "home",
+  },
+  {
+    alt: "ícone do serviços",
+    src: FeaturesIcon,
+    path: "features",
+  },
+  {
+    alt: "ícone do cardapio",
+    src: FoodIcon,
+    path: "menu",
+  },
+  {
+    alt: "ícone do fazer reserva",
+    src: ReserveIcon,
+    path: "reserve",
+  },
+  {
+    alt: "ícone do sobre",
+    src: BookIcon,
+    path: "about",
+  },
+  {
+    alt: "ícone do carrinho de compras",
+    src: CarIcon,
+    path: "car",
+  },
+];
 
 export const featuresData: Feature[] = [
   {

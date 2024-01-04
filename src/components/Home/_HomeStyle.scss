@@ -1,22 +1,53 @@
 @import "/src/Theme/theme";
+@import "../../utils/mixins/mixins";
 
 .home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 22.3rem;
-  background: $background-color;
-}
+  @include for-size(smaller-phone) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22.3rem;
+    background: $background-color;
 
-.home__container {
-  width: 36rem;
-}
+    &__container {
+      width: 36rem;
+    }
 
-.home__container__inner {
-  display: flex;
-  justify-content: space-between;
+    &__content-title {
+      text-align: center;
+      font-size: 2rem;
+      font-family: $primary-font;
+      color: $primary-color;
+    }
 
-  & p {
-    color: $text-color;
+    &__container__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 2.6rem;
+      align-items: center;
+      justify-content: center;
+
+      & p {
+        color: $text-color;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    &__content-text {
+      font-family: $primary-font;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+    }
+
+    &__btns {
+      display: flex;
+      gap: 2.5rem;
+    }
   }
 }

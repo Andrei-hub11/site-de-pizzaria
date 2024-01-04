@@ -3,7 +3,7 @@ import "./_FeaturesStyle.scss";
 
 function Features() {
   return (
-    <section className="features">
+    <section className="features" id="features">
       <h2 className="features__title">Nossos Recursos</h2>
       <p className="features__intro">
         Descubra o que torna a nossa pizzaria especial. Conheça nossos recursos

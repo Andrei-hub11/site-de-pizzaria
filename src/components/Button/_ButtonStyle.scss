@@ -40,3 +40,11 @@
     }
   }
 }
+
+.quaternary {
+  @include for-size(smaller-phone) {
+    padding: 0.4rem 1.8rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+  }
+}
