@@ -1,4 +1,4 @@
-import { Feature, MenuItem } from "../types";
+import { Feature, MenuItem, Reservation } from "../types";
 
 import PizzaIcon from "../assets/icons/la_pizza-slice.svg";
 import DeliveryIcon from "../assets/icons/carbon_delivery-parcel.svg";
@@ -10,6 +10,11 @@ import FrangoImage from "../assets/images/pizza_frango.webp";
 import QueijoImage from "../assets/images/pizza_queijo.webp";
 import AtumImage from "../assets/images/pizza_atum.webp";
 import HavaianaImage from "../assets/images/pizza_havaiana.webp";
+
+import PeopleIcon from "../assets/icons/icon-park-solid_people.svg";
+import DropIcon from "../assets/icons/formkit_down.svg";
+import CalendarIcon from "../assets/icons/clarity_calendar-solid.svg";
+import ClockIcon from "../assets/icons/bi_clock-fill.svg";
 
 export const featuresData: Feature[] = [
   {
@@ -28,6 +33,30 @@ export const featuresData: Feature[] = [
     title: "Fazer pedido é fácil",
     information:
       "Selecione sua pizza no cardápio, clique no ícone do carrinho na parte superior da página, finalize e envie-nos seu pedido",
+  },
+];
+
+export const reservations: Reservation[] = [
+  {
+    id: "1",
+    icon: PeopleIcon,
+    alt: "ícone de pessoa",
+    text: "Selecionar",
+    dropIcon: DropIcon,
+  },
+  {
+    id: "2",
+    icon: CalendarIcon,
+    alt: "ícone de calendario",
+    text: "01/01/2024",
+    dropIcon: DropIcon,
+  },
+  {
+    id: "3",
+    icon: ClockIcon,
+    alt: "ícone de relógio",
+    text: "12:00 PM",
+    dropIcon: DropIcon,
   },
 ];
 

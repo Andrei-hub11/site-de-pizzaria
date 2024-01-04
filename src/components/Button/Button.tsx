@@ -20,6 +20,11 @@ function Button({ btn, children }: BtnProps) {
         {children}
       </a>
     ),
+    tertiary: () => (
+      <a role="botão" onClick={onClick} className="btn tertiary">
+        {children}
+      </a>
+    ),
   };
 
   return button[variant_key]();

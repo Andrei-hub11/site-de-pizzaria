@@ -1,3 +1,5 @@
+@import "/src/Theme/theme";
+
 @mixin for-size($size) {
   @if ($size == smaller-phone) {
     @media (min-width: 23.75em) {
@@ -24,4 +26,11 @@
       @content;
     }
   }
+}
+
+@mixin primary-title-styles($font-size) {
+  text-align: center;
+  font-size: $font-size;
+  font-family: $title-primary-font;
+  color: $primary-color;
 }

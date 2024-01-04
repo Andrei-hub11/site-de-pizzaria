@@ -43,3 +43,11 @@ export type MenuItem = {
     };
   };
 };
+
+export type Reservation = {
+  id: string;
+  icon: string;
+  alt: string;
+  text: string;
+  dropIcon: string;
+};
