@@ -20,7 +20,7 @@ function Home() {
           </div>
           <div className="home__btns">
             {homeIcons.map((icon) => (
-              <img src={icon.src} alt={icon.alt} />
+              <img key={icon.alt} src={icon.src} alt={icon.alt} />
             ))}
           </div>
         </div>

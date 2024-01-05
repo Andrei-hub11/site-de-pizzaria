@@ -48,3 +48,10 @@
     font-weight: bold;
   }
 }
+
+.quinary {
+  @include for-size(smaller-phone) {
+    padding: 0.3rem 1rem;
+    background: $background-color;
+  }
+}

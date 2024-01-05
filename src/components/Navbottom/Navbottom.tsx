@@ -2,8 +2,11 @@ import { Link } from "react-scroll";
 
 import { navIcons } from "../../constants/constants";
 import "./_Navbottom.scss";
+import useNavbottom from "./useNavbottom";
 
 function Navbottom() {
+  const { toggleMenu } = useNavbottom();
+
   return (
     <section className="navbottom">
       {navIcons.map((icon) => (
@@ -15,7 +18,11 @@ function Navbottom() {
           smooth={true}
           duration={100}
         >
-          <img src={icon.src} alt={icon.alt} />
+          <img
+            src={icon.src}
+            alt={icon.alt}
+            onClick={() => (icon.path === "car" ? toggleMenu() : null)}
+          />
         </Link>
       ))}
     </section>

@@ -1,0 +1,123 @@
+@import "../../utils/mixins/mixins";
+@import "/src/Theme/theme";
+
+.cart {
+  @include for-size(smaller-phone) {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    min-height: 22.6rem;
+    width: 22.6rem;
+    background: $primary-color;
+    z-index: 100;
+    transition: top 0.5s ease-in;
+
+    &__container {
+      margin: 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__container-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__drop {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      /*  height: 2rem; */
+      /* overflow: hidden; */
+    }
+
+    & .drop--open {
+      display: none;
+    }
+
+    &__drop-options {
+      display: flex;
+      flex-direction: column;
+      width: 8rem;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      background: $background-color;
+      overflow: hidden;
+      border: 0.2rem solid $text-color;
+      border-radius: 0.5rem;
+    }
+
+    &__option {
+      text-align: center;
+      font-size: 1rem;
+      font-family: $primary-font;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      color: $text-color;
+      cursor: pointer;
+
+      &:hover {
+        background: $primary-color;
+      }
+    }
+
+    &__information {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-family: $primary-font;
+    }
+
+    &__price {
+      margin-left: auto;
+      font-size: 1.2rem;
+      font-family: $primary-font;
+      font-weight: 600;
+    }
+
+    &__control {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &__img {
+      width: 10rem;
+      height: 5.8rem;
+
+      & img {
+        object-fit: cover;
+        width: 10rem;
+        height: 5.8rem;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &__divider {
+      margin: 0 auto;
+      width: 18.6rem;
+      height: 0.1rem;
+      background: #fff;
+    }
+  }
+}
+
+.cart--open {
+  @include for-size(smaller-phone) {
+    top: 0;
+    transition: top 0.5s ease-in;
+  }
+}
