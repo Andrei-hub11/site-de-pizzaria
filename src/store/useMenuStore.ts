@@ -5,16 +5,16 @@ interface MenuState {
 }
 
 interface MenuActions {
-  toggleMenu: () => void;
-  closeMenu: () => void;
+  openCartMenu: () => void;
+  closeCartMenu: () => void;
 }
 
 type MenuStore = MenuState & MenuActions;
 
 const useMenuStore = create<MenuStore>((set) => ({
   isOpen: false,
-  toggleMenu: () => set((state) => ({ isOpen: !state.isOpen })),
-  closeMenu: () => set(() => ({ isOpen: false })),
+  openCartMenu: () => set(() => ({ isOpen: true })),
+  closeCartMenu: () => set(() => ({ isOpen: false })),
 }));
 
 export default useMenuStore;

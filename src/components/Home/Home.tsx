@@ -1,5 +1,7 @@
+import { Link } from "react-scroll";
 import { homeIcons } from "../../constants/constants";
 import Button from "../Button/Button";
+
 import "./_HomeStyle.scss";
 
 /* import homeImage from "../../assets/images/imagem do home.png"; */
@@ -14,9 +16,17 @@ function Home() {
             <p className="home__content-text">A melhor pizza da região</p>
           </div>
           <div>
-            <Button btn={{ variant_key: "quaternary", onClick: undefined }}>
-              Comprar
-            </Button>
+            <Link
+              activeClass="active"
+              to="menu"
+              spy={true}
+              smooth={true}
+              duration={100}
+            >
+              <Button btn={{ variant_key: "quaternary", onClick: undefined }}>
+                Comprar
+              </Button>
+            </Link>
           </div>
           <div className="home__btns">
             {homeIcons.map((icon) => (

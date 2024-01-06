@@ -128,13 +128,14 @@ export const reservations: Reservation[] = [
 export const menuOptions: MenuItem[] = [
   {
     front: {
-      id: "pizza de calabresa",
+      id: "7f7d75a1-9c6c-4e13-bbc1-3e02481a2a09",
       item: {
         imgSrc: CalabresaImage,
         imgAlt: "imagem da pizza de calabresa",
         title: "Pizza de Calabresa",
         information:
           "Deliciosa Pizza de Calabresa: Sabor autêntico, massa crocante e ingredientes frescos. Peça agora!",
+        type: "pizza",
         control: {
           price: "R$ 32.00",
           secondaryControl: {
@@ -160,13 +161,14 @@ export const menuOptions: MenuItem[] = [
   },
   {
     front: {
-      id: "pizza de milho",
+      id: "a3c9b2f7-82a1-4f5d-ae36-9cf9e887c3b8",
       item: {
         imgSrc: MilhoImage,
         imgAlt: "imagem da pizza de milho",
         title: "Pizza de Milho",
         information:
           "Pizza de Milho com Presunto: Um equilíbrio perfeito de doçura do milho e o sabor defumado do presunto fatiado.",
+        type: "pizza",
         control: {
           price: "R$ 32.00",
           secondaryControl: {
@@ -188,13 +190,14 @@ export const menuOptions: MenuItem[] = [
   },
   {
     front: {
-      id: "pizza de frango",
+      id: "e64d9a86-4b06-4898-bfd6-d6c9f89f2f1e",
       item: {
         imgSrc: FrangoImage,
         imgAlt: "imagem da pizza de frango",
         title: "Pizza de Frango",
         information:
           "Pizza de Frango: Ternos pedaços de frango e temperos deliciosos em cada fatia. Uma escolha irresistível!",
+        type: "pizza",
         control: {
           price: "R$ 32.00",
           secondaryControl: {
@@ -222,13 +225,14 @@ export const menuOptions: MenuItem[] = [
   },
   {
     front: {
-      id: "pizza de queijo",
+      id: "2f4e589d-7c9a-498b-ae8a-ef9d3e07a609",
       item: {
         imgSrc: QueijoImage,
         imgAlt: "imagem da pizza de queijo",
         title: "Pizza de Queijo",
         information:
           "Clássica Pizza de Queijo: Uma indulgência de queijo derretido sobre uma massa crocante.",
+        type: "pizza",
         control: {
           price: "R$ 32.00",
           secondaryControl: {
@@ -255,11 +259,12 @@ export const menuOptions: MenuItem[] = [
   },
   {
     front: {
-      id: "pizza de atum",
+      id: "8d7302ef-ee65-4a35-aa1b-87c1cf07f18c",
       item: {
         imgSrc: AtumImage,
         imgAlt: "imagem da pizza de atum",
         title: "Pizza de Queijo",
+        type: "pizza",
         information:
           "Pizza de Atum: Atum suculento, queijo derretido e um toque especial de sabor do mar. Uma escolha deliciosa!",
         control: {
@@ -289,11 +294,12 @@ export const menuOptions: MenuItem[] = [
   },
   {
     front: {
-      id: "pizza havaiana",
+      id: "b7c134a9-f1b4-4376-b9f8-23c2d8f54e82",
       item: {
         imgSrc: HavaianaImage,
         imgAlt: "imagem da pizza havaiana",
         title: "Pizza Havaiana",
+        type: "pizza",
         information:
           "Pizza Havaiana: O equilíbrio perfeito entre o doce abacaxi e o salgado presunto, em uma base de massa perfeitamente assada.",
         control: {

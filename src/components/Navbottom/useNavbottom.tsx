@@ -1,8 +1,8 @@
 import useMenuStore from "../../store/useMenuStore";
 
 const useNavbottom = () => {
-  const { toggleMenu } = useMenuStore();
-  return { toggleMenu };
+  const { isOpen, openCartMenu } = useMenuStore();
+  return { isOpen, openCartMenu };
 };
 
 export default useNavbottom;

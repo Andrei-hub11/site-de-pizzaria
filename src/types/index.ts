@@ -1,3 +1,12 @@
+export type Product = {
+  id: string;
+  type: string;
+  name: string;
+  price: number;
+  image: string;
+  quantity: number;
+};
+
 export type Feature = {
   icon: string;
   title: string;
@@ -24,6 +33,7 @@ export type MenuItem = {
       imgAlt: string;
       title: string;
       information: string;
+      type: string;
       control: {
         price: string;
         secondaryControl: {

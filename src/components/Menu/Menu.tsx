@@ -5,7 +5,7 @@ import useMenuLogic from "./useMenuLogic";
 import { menuOptions } from "../../constants/constants";
 
 function Menu() {
-  const { isFront, handleChangeCard } = useMenuLogic();
+  const { isFront, handleChangeCard, handleAddToCart } = useMenuLogic();
 
   return (
     <section className="menu" id="menu">
@@ -34,7 +34,11 @@ function Menu() {
             <div className="menu__options__front">
               <div className="menu__options__front__item">
                 <div className="menu__options__front__item-img">
-                  <img src={front.item.imgSrc} alt={front.item.imgAlt} />
+                  <img
+                    src={front.item.imgSrc}
+                    alt={front.item.imgAlt}
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="menu__options__front-title">
                   {front.item.title}
@@ -47,7 +51,18 @@ function Menu() {
                     {front.item.control.price}
                   </p>
                   <Button
-                    btn={{ variant_key: "secondary", onClick: undefined }}
+                    btn={{
+                      variant_key: "secondary",
+                      onClick: () =>
+                        handleAddToCart({
+                          id: front.id,
+                          name: front.item.title,
+                          type: front.item.type,
+                          image: front.item.imgSrc,
+                          price: 0,
+                          quantity: 1,
+                        }),
+                    }}
                   >
                     Comprar
                   </Button>
