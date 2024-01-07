@@ -37,6 +37,8 @@ function Menu() {
                   <img
                     src={front.item.imgSrc}
                     alt={front.item.imgAlt}
+                    width="1500"
+                    height="1000"
                     loading="lazy"
                   />
                 </div>

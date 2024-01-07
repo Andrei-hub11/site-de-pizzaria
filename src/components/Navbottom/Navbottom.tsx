@@ -5,7 +5,7 @@ import "./_Navbottom.scss";
 import useNavbottom from "./useNavbottom";
 
 function Navbottom() {
-  const { openCartMenu } = useNavbottom();
+  const { products, openCartMenu } = useNavbottom();
 
   return (
     <section className="navbottom">
@@ -18,12 +18,18 @@ function Navbottom() {
           smooth={true}
           duration={100}
         >
-          <img
-            src={icon.src}
-            alt={icon.alt}
-            id={`${icon.path === "car" ? "cartIcon" : ""}`}
-            onClick={() => (icon.path === "car" ? openCartMenu() : null)}
-          />
+          <div
+            className={`navbottom__icon ${
+              icon.path === "car" && products.length > 0 ? "has--item" : ""
+            }`}
+          >
+            <img
+              src={icon.src}
+              alt={icon.alt}
+              id={`${icon.path === "car" ? "cartIcon" : ""}`}
+              onClick={() => (icon.path === "car" ? openCartMenu() : null)}
+            />
+          </div>
         </Link>
       ))}
     </section>

@@ -1,8 +1,10 @@
 import { useState } from "react";
 
-interface DropmenuState {
+/* interface DropmenuState {
   [key: string]: boolean;
-}
+} */
+
+type DropmenuState = Record<string, boolean>;
 
 const useReserveLogic = () => {
   const [isOpen, setIsOpen] = useState<DropmenuState>({});

@@ -21,9 +21,7 @@ export type ButtonProps = {
   $isUnique?: boolean;
 };
 
-export type Variants = {
-  [key: string]: () => React.ReactNode;
-};
+export type Variants = Record<string, () => React.ReactNode>;
 
 export type MenuItem = {
   front: {

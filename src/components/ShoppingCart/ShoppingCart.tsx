@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import "./_ShoppingCart.scss";
 import Button from "../Button/Button";
 
@@ -20,10 +22,13 @@ function ShoppingCart() {
   } = useShoppingCart();
 
   return (
-    <div
+    <motion.div
       ref={menuRef}
-      className={`cart ${isOpen ? "cart--open" : ""}`}
+      className="cart"
       id="car"
+      initial={{ y: "-100%" }}
+      animate={{ y: isOpen ? "0%" : "-100%" }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
     >
       <div className="cart__container">
         {products.map((product) => {
@@ -34,7 +39,12 @@ function ShoppingCart() {
             <div key={product.id} className="cart__container-inner">
               <div className="cart__content">
                 <div className="cart__img">
-                  <img src={product.image} alt={product.name} />
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    width="1500"
+                    height="1000"
+                  />
                 </div>
                 {product.type === "pizza" ? (
                   <div className="cart__drop">
@@ -129,7 +139,7 @@ function ShoppingCart() {
           Comprar
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
