@@ -12,6 +12,10 @@
     letter-spacing: 0.1rem;
     cursor: pointer;
   }
+
+  @include for-size(medium-phone) {
+    font-size: 1.3rem;
+  }
 }
 
 .secondary {

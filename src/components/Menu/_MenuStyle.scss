@@ -20,9 +20,51 @@
 
     &__control {
       margin: 2rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: 33.6rem;
       height: 4rem;
       background: $secondary-color;
+      padding: 0 1rem;
+    }
+
+    &__control-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      height: 3rem;
+      width: 3rem;
+      background: $primary-color;
+      border-radius: 50%;
+    }
+
+    &__control-container {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    &__control-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3rem;
+      width: 3rem;
+      background: $primary-color;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    & .control-icon--variant {
+      display: none;
+    }
+  }
+
+  @include for-size(medium-phone) {
+    &__nav-title {
+      font-size: 2rem;
     }
   }
 }
@@ -52,9 +94,13 @@
     width: 16rem;
     height: 25.6rem;
   }
+
+  @include for-size(medium-phone) {
+    width: 17.6rem;
+  }
 }
 
-.menu__options__front {
+.menu__front {
   @include for-size(smaller-phone) {
     position: absolute;
     backface-visibility: hidden;
@@ -63,15 +109,19 @@
   }
 }
 
-.menu__options__front__item {
+.menu__front__item {
   @include for-size(smaller-phone) {
     width: 16rem;
     height: 25.6rem;
     background: $secondary-color;
   }
+
+  @include for-size(medium-phone) {
+    width: 17.6rem;
+  }
 }
 
-.menu__options__front__item-img {
+.menu__front__item-img {
   @include for-size(smaller-phone) {
     width: 15.2rem;
     height: 8.7rem;
@@ -86,9 +136,19 @@
       border-radius: 2rem;
     }
   }
+
+  @include for-size(medium-phone) {
+    width: 16.7rem;
+    height: 9.9rem;
+
+    & img {
+      width: 16.7rem;
+      height: 9.9rem;
+    }
+  }
 }
 
-.menu__options__front-title {
+.menu__front-title {
   @include for-size(smaller-phone) {
     text-align: center;
     margin-top: 1.6rem;
@@ -96,7 +156,7 @@
   }
 }
 
-.menu__options__front-information {
+.menu__front-information {
   @include for-size(smaller-phone) {
     text-align: center;
     font-size: 1.2rem;
@@ -105,7 +165,7 @@
   }
 }
 
-.menu__options__front__control {
+.menu__front__control {
   @include for-size(smaller-phone) {
     position: absolute;
     bottom: 3.5rem;
@@ -127,7 +187,7 @@
   }
 }
 
-.menu__options__front__control--secondary {
+.menu__front__control--secondary {
   @include for-size(smaller-phone) {
     position: absolute;
     bottom: 1rem;
@@ -137,7 +197,7 @@
   }
 }
 
-.menu__options__back {
+.menu__back {
   @include for-size(smaller-phone) {
     position: absolute;
     width: 16rem;
@@ -146,13 +206,7 @@
     transform: perspective(600px) rotateY(-180deg);
     transition: transform 0.55s linear;
     background: $secondary-color;
-  }
-}
 
-.menu__options__back__card {
-  @include for-size(smaller-phone) {
-    position: relative;
-    height: 100%;
     &__list {
       margin: 1rem auto;
       width: 100%;
@@ -164,13 +218,24 @@
       color: $primary-color;
     }
   }
+
+  @include for-size(medium-phone) {
+    width: 17.6rem;
+  }
 }
 
-.back--active .menu__options__front {
+.menu__back__card {
+  @include for-size(smaller-phone) {
+    position: relative;
+    height: 100%;
+  }
+}
+
+.back--active .menu__front {
   transform: perspective(600px) rotateY(180deg);
 }
 
-.back--active .menu__options__back {
+.back--active .menu__back {
   transform: perspective(600px) rotateY(0deg);
 }
 

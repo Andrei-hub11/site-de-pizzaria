@@ -1,3 +1,5 @@
+import { motion, useAnimation } from "framer-motion";
+
 import { ButtonProps, Variants } from "../../types";
 import "./_ButtonStyle.scss";
 
@@ -9,6 +11,15 @@ interface BtnProps {
 function Button({ btn, children }: BtnProps) {
   const { variant_key, onClick } = btn;
 
+  const controls = useAnimation();
+
+  const startAnimation = async () => {
+    await controls.start({
+      rotate: [0, 3, -3, 1, 0],
+      transition: { duration: 0.7, ease: "easeInOut" },
+    });
+  };
+
   const button: Variants = {
     primary: () => (
       <a role="botão" onClick={onClick} className="btn primary">
@@ -16,9 +27,17 @@ function Button({ btn, children }: BtnProps) {
       </a>
     ),
     secondary: () => (
-      <a role="botão" onClick={onClick} className="btn secondary">
+      <motion.a
+        role="botão"
+        onClick={(e) => {
+          onClick && onClick(e);
+          startAnimation();
+        }}
+        className="btn secondary"
+        animate={controls}
+      >
         {children}
-      </a>
+      </motion.a>
     ),
     tertiary: () => (
       <a role="botão" onClick={onClick} className="btn tertiary">

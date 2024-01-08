@@ -66,4 +66,10 @@
       letter-spacing: 0.1rem;
     }
   }
+
+  @include for-size(medium-phone) {
+    &__title {
+      font-size: 2.6rem;
+    }
+  }
 }

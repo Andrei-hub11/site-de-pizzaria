@@ -23,7 +23,10 @@ const useCartStore = create<CartState>((set) => ({
   dropdown: [],
   addToCart: (product) =>
     set((state) => ({
-      products: [...state.products, { ...product, quantity: 1, price: 32 }],
+      products: [
+        ...state.products,
+        { ...product, quantity: 1, price: product.price },
+      ],
     })),
   removeFromCart: (productId) =>
     set((state) => ({
@@ -44,12 +47,12 @@ const useCartStore = create<CartState>((set) => ({
           if (product.id === productId) {
             const newQuantity = product.quantity - quantity;
             if (newQuantity <= 0) {
-              return acc; // Ignore and keep the product out of the accumulator
+              return acc; // remove o item
             }
             const updatedProduct = { ...product, quantity: newQuantity };
-            return [...acc, updatedProduct]; // Include the updated product in the accumulator
+            return [...acc, updatedProduct];
           }
-          return [...acc, product]; // Include unchanged products in the accumulator
+          return [...acc, product];
         },
         []
       );

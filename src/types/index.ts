@@ -1,3 +1,5 @@
+import { AnimationControls } from "framer-motion";
+
 export type Product = {
   id: string;
   type: string;
@@ -18,10 +20,23 @@ export type ButtonProps = {
   onClick?: (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => void | undefined;
-  $isUnique?: boolean;
+  animationControls?: AnimationControls;
 };
 
 export type Variants = Record<string, () => React.ReactNode>;
+
+export type SpecialMenu = {
+  id: string;
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  information: string;
+  type: string;
+  price: number;
+  control: {
+    price: string;
+  };
+};
 
 export type MenuItem = {
   front: {
@@ -51,6 +66,8 @@ export type MenuItem = {
     };
   };
 };
+
+export type Menu = Record<string, MenuItem[] | SpecialMenu[]>;
 
 export type Reservation = {
   id: string;

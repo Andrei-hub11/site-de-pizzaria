@@ -50,4 +50,10 @@
       gap: 2.5rem;
     }
   }
+
+  @include for-size(medium-phone) {
+    &__content-title {
+      font-size: 2.2rem;
+    }
+  }
 }

@@ -5,7 +5,7 @@ import "./_Navbottom.scss";
 import useNavbottom from "./useNavbottom";
 
 function Navbottom() {
-  const { products, openCartMenu } = useNavbottom();
+  const { products, toggleCartMenu } = useNavbottom();
 
   return (
     <section className="navbottom">
@@ -27,7 +27,7 @@ function Navbottom() {
               src={icon.src}
               alt={icon.alt}
               id={`${icon.path === "car" ? "cartIcon" : ""}`}
-              onClick={() => (icon.path === "car" ? openCartMenu() : null)}
+              onClick={() => (icon.path === "car" ? toggleCartMenu() : null)}
             />
           </div>
         </Link>

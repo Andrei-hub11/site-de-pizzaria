@@ -1,9 +1,12 @@
 import {
   Feature,
   IconsList,
+  SpecialMenu,
   MenuItem,
   Reservation,
   listHomeIcons,
+  Menu,
+  DrinksMenu,
 } from "../types";
 
 import PizzaIcon from "../assets/icons/la_pizza-slice.svg";
@@ -25,6 +28,10 @@ import ClockIcon from "../assets/icons/bi_clock-fill.svg";
 import InstagramIcon from "../assets/icons/ri_instagram-fill.svg";
 import WhatsAppIcon from "../assets/icons/uil_whatsapp-alt.svg";
 import FacebookIcon from "../assets/icons/uil_facebook.svg";
+
+import PumpkinPieImage from "../assets/images/sliced-pumpkin-pie.webp";
+import SliceSachertorteCake from "../assets/images/fatia-de-bolo-sacher-com-geleia-de-damasco.webp";
+import RaspberryDrink from "../assets/images/bebida de framboesa.webp";
 
 import HomeIcon from "../assets/icons/ic_round-home.svg";
 import FeaturesIcon from "../assets/icons/eos-icons_service-instance.svg";
@@ -125,6 +132,51 @@ export const reservations: Reservation[] = [
   },
 ];
 
+export const specialOptions: SpecialMenu[] = [
+  {
+    id: "b7f142ae-78b9-4f1d-a63b-0e5d6f61a820",
+    imgSrc: PumpkinPieImage,
+    imgAlt: "imagem da torta de aboborá",
+    title: "Torta de Aboborá",
+    information:
+      "Um deleite reconfortante que une a doçura suave da abóbora com especiarias acolhedoras.",
+    type: "special",
+    price: 8.0,
+    control: {
+      price: "R$ 8.00",
+    },
+  },
+  {
+    id: "b7f142ae-78b9-4f1d-a63b-0e5d6f61a829",
+    imgSrc: SliceSachertorteCake,
+    imgAlt: "imagem de fatia de bolo Sachertorte",
+    title: "Fatia de Bolo Sachertorte",
+    information:
+      "Com camadas densas de bolo de chocolate, é recheado com geleia e coberto por uma fina camada de chocolate amargo. ",
+    type: "special",
+    price: 10.0,
+    control: {
+      price: "R$ 10.00",
+    },
+  },
+];
+
+export const drinkOptions: DrinksMenu[] = [
+  {
+    id: "98a52b7d-6f2e-4e6b-bc0c-7a4f1c9d81a2",
+    imgSrc: RaspberryDrink,
+    imgAlt: "imagem da bebida de framboesa",
+    title: "Refrigerante Framboesa",
+    information:
+      "uma refrescante mistura que combina o sabor vibrante e doce das framboesas com o efervescente e refrescante",
+    type: "drinks",
+    price: 10.0,
+    control: {
+      price: "R$ 10.00",
+    },
+  },
+];
+
 export const menuOptions: MenuItem[] = [
   {
     front: {
@@ -148,11 +200,7 @@ export const menuOptions: MenuItem[] = [
     back: {
       card: {
         title: "Pizza de Calabresa",
-        listItems: [
-          "Calabresa Fatiada",
-          "Molho de Tomate",
-          "Queijo de Mussarela",
-        ],
+        listItems: ["Calabresa Fatiada", "Molho de Tomate", "Queijo Mussarela"],
         control: {
           imgAlt: "ícone de rotação",
         },
@@ -328,3 +376,8 @@ export const menuOptions: MenuItem[] = [
     },
   },
 ];
+
+export const Menus: Menu = {
+  pizza: menuOptions,
+  special: specialOptions,
+};

@@ -4,12 +4,18 @@
 .features {
   @include for-size(smaller-phone) {
     margin-top: 4.5rem;
-  }
-}
 
-.features__title {
-  @include for-size(smaller-phone) {
-    @include primary-title-styles(2.4rem);
+    &__title {
+      @include for-size(smaller-phone) {
+        @include primary-title-styles(2.4rem);
+      }
+    }
+  }
+
+  @include for-size(medium-phone) {
+    &__title {
+      font-size: 2.6rem;
+    }
   }
 }
 
