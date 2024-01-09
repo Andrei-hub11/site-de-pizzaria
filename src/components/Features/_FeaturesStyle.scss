@@ -4,6 +4,7 @@
 .features {
   @include for-size(smaller-phone) {
     margin-top: 4.5rem;
+    overflow: hidden;
 
     &__title {
       @include for-size(smaller-phone) {
@@ -17,6 +18,12 @@
       font-size: 2.6rem;
     }
   }
+
+  @include for-size(tablet-portrait-up) {
+    &__title {
+      font-size: 3.2rem;
+    }
+  }
 }
 
 .features__intro {
@@ -26,6 +33,11 @@
     font-size: 1.4rem;
     font-family: $primary-font;
     width: 30.15rem;
+  }
+
+  @include for-size(phone-only) {
+    font-size: 1.5rem;
+    width: 45.2rem;
   }
 }
 
@@ -38,6 +50,19 @@
     padding: 0 2rem;
     gap: 2.6rem;
   }
+
+  @include for-size(medium-phone) {
+    column-gap: 6rem;
+    padding: 0 3rem;
+  }
+
+  @include for-size(phone-only) {
+    padding: 0 6.2rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 4rem;
+  }
 }
 
 .features__container__item {
@@ -47,20 +72,49 @@
     height: 16rem;
     border-radius: 3rem 0 3rem 0;
   }
+
+  @include for-size(phone-only) {
+    width: 19.8rem;
+    height: 22.4rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    width: 24.6rem;
+    height: 28rem;
+  }
 }
 
 .features__container__item-icon {
   @include for-size(smaller-phone) {
     padding: 1.5rem 0 0 0.9rem;
   }
+
+  @include for-size(phone-only) {
+    transform: scale(1.5);
+  }
+
+  @include for-size(tablet-portrait-up) {
+    transform: scale(2);
+    padding: 1.5rem 0 0 2rem;
+  }
 }
 
 .features__container__item-title {
   @include for-size(smaller-phone) {
-    margin-top: 1.4rem;
     font-family: $title-primary-font;
-    padding: 0 0 0 0.9rem;
+    padding: 1.5rem 0 0 0.9rem;
     font-weight: 600;
+  }
+
+  @include for-size(phone-only) {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 1.8rem;
+    padding: 0 0 0 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -72,5 +126,16 @@
     color: $text-color;
     width: 13rem;
     word-break: break-word;
+  }
+
+  @include for-size(phone-only) {
+    font-size: 1.4rem;
+    width: 17.8rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin: 2rem auto;
+    font-size: 1.6rem;
+    width: 20rem;
   }
 }

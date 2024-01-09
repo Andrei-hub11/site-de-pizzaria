@@ -2,15 +2,19 @@
 
 @mixin for-size($size) {
   @if ($size == smaller-phone) {
-    @media (min-width: 23.75em) {
+    @media (min-width: 22.5em) {
       @content;
     }
   } @else if ($size == medium-phone) {
     @media (min-width: 25rem) {
       @content;
     }
+  } @else if ($size == phone-only) {
+    @media (min-width: 37.5rem) {
+      @content;
+    }
   } @else if ($size == tablet-portrait-up) {
-    @media (min-width: 786px) {
+    @media (min-width: 48em) {
       @content;
     }
   } @else if ($size == tablet-landscape-up) {

@@ -83,7 +83,6 @@ function Menu() {
                         {front.item.control.price}
                       </p>
                       <Button
-                        key={front.id}
                         btn={{
                           variant_key: "secondary",
                           onClick: () => {
@@ -106,6 +105,8 @@ function Menu() {
                         src={RotateIcon}
                         alt="ícone de rotação"
                         onClick={() => handleChangeCard(front.id)}
+                        width="24"
+                        height="24"
                       />
                       <p className="menu__front__control-information">
                         Ver ingredientes
@@ -131,6 +132,8 @@ function Menu() {
                         src={RotateIcon}
                         alt="ícone de rotação"
                         onClick={() => handleChangeCard(front.id)}
+                        width="24"
+                        height="24"
                       />
                     </div>
                   </div>
@@ -139,94 +142,90 @@ function Menu() {
             ))
           : menuSelected === "special"
           ? displaySpecials.map((special) => (
-              <>
-                <div key={special.id} className={`menu__options--pespective`}>
-                  <div className="menu__front">
-                    <div className="menu__front__item">
-                      <div className="menu__front__item-img">
-                        <img
-                          src={special.imgSrc}
-                          alt={special.imgAlt}
-                          width="1500"
-                          height="1000"
-                          loading="lazy"
-                        />
-                      </div>
-                      <h3 className="menu__front-title">{special.title}</h3>
-                      <p className="menu__front-information">
-                        {special.information}
+              <div key={special.id} className={`menu__options--pespective`}>
+                <div className="menu__front">
+                  <div className="menu__front__item">
+                    <div className="menu__front__item-img">
+                      <img
+                        src={special.imgSrc}
+                        alt={special.imgAlt}
+                        width="1500"
+                        height="1000"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h3 className="menu__front-title">{special.title}</h3>
+                    <p className="menu__front-information">
+                      {special.information}
+                    </p>
+                    <div className="menu__front__control">
+                      <p className="menu__front__control-price">
+                        {special.control.price}
                       </p>
-                      <div className="menu__front__control">
-                        <p className="menu__front__control-price">
-                          {special.control.price}
-                        </p>
-                        <Button
-                          btn={{
-                            variant_key: "secondary",
-                            onClick: () => {
-                              handleAddToCart({
-                                id: special.id,
-                                name: special.title,
-                                type: special.type,
-                                image: special.imgSrc,
-                                price: special.price,
-                                quantity: 1,
-                              });
-                            },
-                          }}
-                        >
-                          Comprar
-                        </Button>
-                      </div>
+                      <Button
+                        btn={{
+                          variant_key: "secondary",
+                          onClick: () => {
+                            handleAddToCart({
+                              id: special.id,
+                              name: special.title,
+                              type: special.type,
+                              image: special.imgSrc,
+                              price: special.price,
+                              quantity: 1,
+                            });
+                          },
+                        }}
+                      >
+                        Comprar
+                      </Button>
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             ))
           : displayDrinks.map((drinks) => (
-              <>
-                <div key={drinks.id} className={`menu__options--pespective`}>
-                  <div className="menu__front">
-                    <div className="menu__front__item">
-                      <div className="menu__front__item-img">
-                        <img
-                          src={drinks.imgSrc}
-                          alt={drinks.imgAlt}
-                          width="1500"
-                          height="1000"
-                          loading="lazy"
-                        />
-                      </div>
-                      <h3 className="menu__front-title">{drinks.title}</h3>
-                      <p className="menu__front-information">
-                        {drinks.information}
+              <div key={drinks.id} className={`menu__options--pespective`}>
+                <div className="menu__front">
+                  <div className="menu__front__item">
+                    <div className="menu__front__item-img">
+                      <img
+                        src={drinks.imgSrc}
+                        alt={drinks.imgAlt}
+                        width="1500"
+                        height="1000"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h3 className="menu__front-title">{drinks.title}</h3>
+                    <p className="menu__front-information">
+                      {drinks.information}
+                    </p>
+                    <div className="menu__front__control">
+                      <p className="menu__front__control-price">
+                        {drinks.control.price}
                       </p>
-                      <div className="menu__front__control">
-                        <p className="menu__front__control-price">
-                          {drinks.control.price}
-                        </p>
-                        <Button
-                          btn={{
-                            variant_key: "secondary",
-                            onClick: () => {
-                              handleAddToCart({
-                                id: drinks.id,
-                                name: drinks.title,
-                                type: drinks.type,
-                                image: drinks.imgSrc,
-                                price: drinks.price,
-                                quantity: 1,
-                              });
-                            },
-                          }}
-                        >
-                          Comprar
-                        </Button>
-                      </div>
+                      <Button
+                        btn={{
+                          variant_key: "secondary",
+                          onClick: () => {
+                            handleAddToCart({
+                              id: drinks.id,
+                              name: drinks.title,
+                              type: drinks.type,
+                              image: drinks.imgSrc,
+                              price: drinks.price,
+                              quantity: 1,
+                            });
+                          },
+                        }}
+                      >
+                        Comprar
+                      </Button>
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             ))}
       </div>
       <div className="menu__control">

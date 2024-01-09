@@ -19,6 +19,11 @@
       height: 11.8rem;
       background: $primary-color;
       border-radius: 2rem 0 2rem 0;
+
+      & img {
+        width: 16.3rem;
+        height: 11.8rem;
+      }
     }
 
     &__container-content {
@@ -35,6 +40,57 @@
       font-family: $primary-font;
       font-size: 1rem;
       width: 16.8rem;
+    }
+  }
+
+  @include for-size(phone-only) {
+    &__container {
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 2.6rem;
+    }
+
+    &__container-img {
+      width: 23.4rem;
+      height: 17rem;
+
+      & img {
+        width: 23.4rem;
+        height: 17rem;
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      width: 25.6rem;
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    &__container {
+      gap: 3rem;
+    }
+
+    &__title {
+      font-size: 3.2rem;
+    }
+
+    &__container-img {
+      width: 29.6rem;
+      height: 20.15rem;
+
+      & img {
+        width: 29.6rem;
+        height: 20.15rem;
+      }
+    }
+
+    &__text {
+      font-size: 1.6rem;
+      width: 27.4rem;
     }
   }
 }

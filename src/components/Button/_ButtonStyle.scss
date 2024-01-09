@@ -16,6 +16,11 @@
   @include for-size(medium-phone) {
     font-size: 1.3rem;
   }
+
+  @include for-size(phone-only) {
+    font-size: 1.5rem;
+    padding: 0.6rem 1.6rem;
+  }
 }
 
 .secondary {
@@ -24,6 +29,10 @@
     border: 0.2rem $primary-color solid;
     color: $primary-color;
     background: #fff;
+  }
+
+  @include for-size(medium-phone) {
+    padding: 0.2rem 1.4rem;
   }
 }
 
@@ -52,11 +61,25 @@
     border-radius: 0.5rem;
     font-weight: bold;
   }
+
+  @include for-size(medium-phone) {
+    font-size: 1.4rem;
+    padding: 0.4rem 2rem;
+  }
+
+  @include for-size(phone-only) {
+    padding: 0.6rem 3.2rem;
+  }
 }
 
 .quinary {
   @include for-size(smaller-phone) {
     padding: 0.3rem 1rem;
     background: $background-color;
+  }
+
+  @include for-size(phone-only) {
+    font-size: 1.5rem;
+    padding: 0.6rem 4.8rem;
   }
 }

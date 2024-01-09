@@ -150,6 +150,89 @@
       margin: 2rem auto;
     }
   }
+
+  @include for-size(medium-phone) {
+    width: 29.2rem;
+    height: auto;
+
+    &__information {
+      width: 11rem;
+    }
+
+    &__quantity {
+      font-size: 1.4rem;
+    }
+
+    &__price {
+      font-size: 1.4rem;
+    }
+
+    &__information-title {
+      font-size: 1.4rem;
+    }
+
+    &__img {
+      width: 12rem;
+      height: 6.8rem;
+
+      & img {
+        width: 12rem;
+        height: 6.8rem;
+      }
+    }
+  }
+
+  @include for-size(phone-only) {
+    width: 40rem;
+
+    &__container {
+      gap: 2rem;
+    }
+
+    &__information {
+      width: 12rem;
+    }
+
+    &__drop {
+      gap: 1rem;
+    }
+
+    &__drop-options {
+      width: 12rem;
+      gap: 1.2rem;
+      padding: 0.6rem 0;
+    }
+
+    &__option {
+      font-size: 1.4rem;
+    }
+
+    &__information-title {
+      font-size: 1.5rem;
+    }
+
+    &__img {
+      width: 16.4rem;
+      height: 9.2rem;
+
+      & img {
+        width: 16.4rem;
+        height: 9.2rem;
+      }
+    }
+
+    &__divider {
+      width: 36rem;
+    }
+
+    &__payment {
+      margin: 0 2.5rem;
+    }
+
+    &__payment-text {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 .cart--open {

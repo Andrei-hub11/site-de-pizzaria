@@ -28,6 +28,8 @@ function Navbottom() {
               alt={icon.alt}
               id={`${icon.path === "car" ? "cartIcon" : ""}`}
               onClick={() => (icon.path === "car" ? toggleCartMenu() : null)}
+              width="24"
+              height="24"
             />
           </div>
         </Link>

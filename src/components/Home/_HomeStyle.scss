@@ -3,6 +3,7 @@
 
 .home {
   @include for-size(smaller-phone) {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,12 +49,45 @@
     &__btns {
       display: flex;
       gap: 2.5rem;
+      cursor: pointer;
     }
   }
 
   @include for-size(medium-phone) {
+    height: unset;
+    aspect-ratio: 2/1;
     &__content-title {
       font-size: 2.2rem;
+    }
+  }
+
+  @include for-size(phone-only) {
+    &__content-title {
+      font-size: 2.4rem;
+    }
+
+    &__container__inner {
+      & p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    &__content-title {
+      font-size: 3.2rem;
+    }
+
+    &__container__inner {
+      gap: 3.5rem;
+
+      & p {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__btns {
+      gap: 4rem;
     }
   }
 }

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { homeIcons } from "../../constants/constants";
 import Button from "../Button/Button";
 
@@ -29,7 +31,15 @@ function Home() {
           </div>
           <div className="home__btns">
             {homeIcons.map((icon) => (
-              <img key={icon.alt} src={icon.src} alt={icon.alt} />
+              <motion.img
+                key={icon.alt}
+                src={icon.src}
+                alt={icon.alt}
+                whileHover={{ scale: 1.3 }}
+                transition={{ duration: 0.3 }}
+                height="24"
+                width="24"
+              />
             ))}
           </div>
         </div>

@@ -1,13 +1,18 @@
 import "./_About.scss";
 
-import AboutImage from "../../assets/images/imagem do about.webp";
+import AboutImage from "../../assets/images/jovem-cozinheiro.webp";
 
 function About() {
   return (
     <section className="about" id="about">
       <div className="about__container">
         <div className="about__container-img">
-          <img src={AboutImage} alt="" />
+          <img
+            src={AboutImage}
+            alt="imagem da seção sobre"
+            width="1500"
+            height="1000"
+          />
         </div>
         <div className="about__container-content">
           <h1 className="about__title">Sobre nós</h1>

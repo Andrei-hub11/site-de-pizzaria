@@ -14,8 +14,10 @@ function Features() {
           <div className="features__container__item" key={index}>
             <img
               src={feature.icon}
-              alt=""
+              alt="ícone da seção de recursos"
               className="features__container__item-icon"
+              height="36"
+              width="36"
             />
             <p className="features__container__item-title">{feature.title}</p>
             <p className="features__container__item-information">

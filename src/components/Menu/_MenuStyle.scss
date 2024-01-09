@@ -18,6 +18,11 @@
       gap: 1.4rem;
     }
 
+    &__nav-btns {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     &__control {
       margin: 2rem auto;
       display: flex;
@@ -27,6 +32,16 @@
       height: 4rem;
       background: $secondary-color;
       padding: 0 1rem;
+    }
+
+    &__options {
+      margin-top: 3.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1rem;
+      gap: 1rem;
     }
 
     &__control-page {
@@ -63,28 +78,61 @@
   }
 
   @include for-size(medium-phone) {
+    &__options {
+      gap: 3rem;
+    }
+
     &__nav-title {
       font-size: 2rem;
     }
-  }
-}
 
-.menu__nav-btns {
-  @include for-size(smaller-phone) {
-    display: flex;
-    gap: 0.5rem;
+    &__nav-btns {
+      gap: 1rem;
+    }
   }
-}
 
-.menu__options {
-  @include for-size(smaller-phone) {
-    margin-top: 3.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem;
-    gap: 1rem;
+  @include for-size(phone-only) {
+    &__nav {
+      padding: 0 3rem;
+    }
+
+    &__options {
+      padding: 0 3.5rem;
+    }
+
+    &__nav-btns {
+      gap: 2rem;
+    }
+
+    &__control {
+      margin: 4rem auto;
+      width: 51.4rem;
+      height: 5rem;
+      padding: 0 2.5rem;
+    }
+
+    &__control-container {
+      gap: 2rem;
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    margin-top: 12rem;
+    &__nav {
+      padding: 0 4rem;
+    }
+
+    &__nav-title {
+      font-size: 2.6rem;
+    }
+
+    &__nav-btns {
+      gap: 3rem;
+    }
+
+    &__control {
+      width: 58.8rem;
+    }
   }
 }
 
@@ -97,6 +145,12 @@
 
   @include for-size(medium-phone) {
     width: 17.6rem;
+    height: 26.6rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    width: 24.4rem;
+    height: 35.4rem;
   }
 }
 
@@ -118,6 +172,12 @@
 
   @include for-size(medium-phone) {
     width: 17.6rem;
+    height: 26.6rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    width: 24.4rem;
+    height: 35.4rem;
   }
 }
 
@@ -146,6 +206,17 @@
       height: 9.9rem;
     }
   }
+
+  @include for-size(tablet-portrait-up) {
+    margin: 0 auto;
+    width: 23.2rem;
+    height: 13.6rem;
+    padding: 0.5rem 0;
+    & img {
+      width: 23.2rem;
+      height: 13.6rem;
+    }
+  }
 }
 
 .menu__front-title {
@@ -153,6 +224,10 @@
     text-align: center;
     margin-top: 1.6rem;
     font-family: $title-secondary-font;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 1.8rem;
   }
 }
 
@@ -162,6 +237,10 @@
     font-size: 1.2rem;
     margin: 0.4rem 0.3rem;
     font-family: $primary-font;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    font-size: 1.5rem;
   }
 }
 
@@ -182,6 +261,13 @@
 
     &-information {
       font-size: 1.2rem;
+      font-family: $primary-font;
+    }
+  }
+
+  @include for-size(tablet-portrait-up) {
+    &-price {
+      font-size: 1.5rem;
       font-family: $primary-font;
     }
   }
@@ -215,12 +301,27 @@
 
     &__list-item {
       font-size: 1.2rem;
+      font-family: $primary-font;
+      font-weight: 600;
       color: $primary-color;
+    }
+
+    @include for-size(tablet-portrait-up) {
+      &__list-item {
+        font-size: 1.5rem;
+        color: $primary-color;
+      }
     }
   }
 
   @include for-size(medium-phone) {
     width: 17.6rem;
+    height: 26.6rem;
+  }
+
+  @include for-size(tablet-portrait-up) {
+    width: 24.4rem;
+    height: 35.4rem;
   }
 }
 
