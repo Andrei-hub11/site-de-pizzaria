@@ -38,6 +38,10 @@ export type SpecialMenu = {
   };
 };
 
+type DrinksMenu = SpecialMenu;
+
+export default DrinksMenu;
+
 export type MenuItem = {
   front: {
     id: string;

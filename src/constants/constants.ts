@@ -1,11 +1,10 @@
-import {
+import DrinksMenu, {
   Feature,
   IconsList,
   SpecialMenu,
   MenuItem,
   Reservation,
   listHomeIcons,
-  DrinksMenu,
 } from "../types";
 
 import PizzaIcon from "../assets/icons/la_pizza-slice.svg";
