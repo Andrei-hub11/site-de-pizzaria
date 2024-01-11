@@ -5,7 +5,7 @@
   @include for-size(smaller-phone) {
     position: sticky;
     bottom: 1rem;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,5 +28,11 @@
     & .has--item {
       background: #fff;
     }
+  }
+
+  @include for-size(desktop-up) {
+    width: 38rem;
+    gap: 3rem;
+    padding: 0.4rem;
   }
 }

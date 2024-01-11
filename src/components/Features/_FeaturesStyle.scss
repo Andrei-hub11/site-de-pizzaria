@@ -39,6 +39,10 @@
     font-size: 1.5rem;
     width: 45.2rem;
   }
+
+  @include for-size(tablet-landscape-up) {
+    font-size: 1.8rem;
+  }
 }
 
 .features__container {
@@ -52,8 +56,7 @@
   }
 
   @include for-size(medium-phone) {
-    column-gap: 6rem;
-    padding: 0 3rem;
+    column-gap: 6.2rem;
   }
 
   @include for-size(phone-only) {
@@ -62,6 +65,11 @@
 
   @include for-size(tablet-portrait-up) {
     margin-top: 4rem;
+  }
+
+  @include for-size(tablet-landscape-up) {
+    margin-top: 6rem;
+    row-gap: 4rem;
   }
 }
 

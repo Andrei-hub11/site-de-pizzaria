@@ -12,6 +12,7 @@ function About() {
             alt="imagem da seção sobre"
             width="1500"
             height="1000"
+            loading="lazy"
           />
         </div>
         <div className="about__container-content">

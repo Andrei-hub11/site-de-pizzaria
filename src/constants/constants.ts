@@ -5,7 +5,6 @@ import {
   MenuItem,
   Reservation,
   listHomeIcons,
-  Menu,
   DrinksMenu,
 } from "../types";
 
@@ -376,8 +375,3 @@ export const menuOptions: MenuItem[] = [
     },
   },
 ];
-
-export const Menus: Menu = {
-  pizza: menuOptions,
-  special: specialOptions,
-};

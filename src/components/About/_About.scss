@@ -93,4 +93,20 @@
       width: 27.4rem;
     }
   }
+
+  @include for-size(tablet-landscape-up) {
+    &__container-img {
+      width: 39.2rem;
+      height: 28.5rem;
+
+      & img {
+        width: 39.2rem;
+        height: 28.5rem;
+      }
+    }
+
+    &__text {
+      width: 34rem;
+    }
+  }
 }

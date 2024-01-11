@@ -3,7 +3,7 @@
 
 .cart {
   @include for-size(smaller-phone) {
-    position: fixed;
+    position: absolute;
     top: 0;
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
     width: 22.6rem;
     background: $primary-color;
     z-index: 100;
-    transition: top 0.5s ease-in;
+    overflow-y: auto;
 
     &__container {
       margin: 1rem 1rem;

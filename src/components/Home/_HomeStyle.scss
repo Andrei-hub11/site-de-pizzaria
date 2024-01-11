@@ -3,7 +3,6 @@
 
 .home {
   @include for-size(smaller-phone) {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +87,26 @@
 
     &__btns {
       gap: 4rem;
+    }
+  }
+
+  @include for-size(tablet-landscape-up) {
+    &__container__inner {
+      & p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__btns {
+      gap: 5rem;
+    }
+  }
+
+  @include for-size(desktop-up) {
+    height: 40vw;
+    aspect-ratio: unset;
+    &__container__inner {
+      gap: 6rem;
     }
   }
 }

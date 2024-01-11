@@ -72,6 +72,7 @@ function Menu() {
                         width="1500"
                         height="1000"
                         loading="lazy"
+                        decoding="sync"
                       />
                     </div>
                     <h3 className="menu__front-title">{front.item.title}</h3>

@@ -17,7 +17,8 @@ const useMenuLogic = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [menuSelected, setMenuSelected] = useState<string>("pizza");
 
-  const { products, addToCart, startDropdwon } = useCartStore();
+  const { products, addToCart, incrementQuantity, startDropdwon } =
+    useCartStore();
 
   const itemsPerPage: number = 4;
 
@@ -54,9 +55,13 @@ const useMenuLogic = () => {
   };
 
   const handleAddToCart = (product: Product) => {
-    addToCart(product);
+    if (!products.some((p) => p.id === product.id)) {
+      addToCart(product);
+      startDropdwon(product.id);
+      return;
+    }
 
-    startDropdwon(product.id);
+    incrementQuantity(product.id, 1);
   };
 
   const handlePrev = () => {
