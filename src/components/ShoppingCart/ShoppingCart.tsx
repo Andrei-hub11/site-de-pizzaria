@@ -44,6 +44,7 @@ function ShoppingCart() {
                     alt={product.name}
                     width="1500"
                     height="1000"
+                    srcSet={product.imageSrcSet}
                   />
                 </div>
                 {product.type === "pizza" ? (

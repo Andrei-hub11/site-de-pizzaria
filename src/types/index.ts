@@ -6,6 +6,7 @@ export type Product = {
   name: string;
   price: number;
   image: string;
+  imageSrcSet: string;
   quantity: number;
 };
 
@@ -29,6 +30,7 @@ export type SpecialMenu = {
   id: string;
   imgSrc: string;
   imgAlt: string;
+  imgSrcSet: string;
   title: string;
   information: string;
   type: string;
@@ -48,6 +50,7 @@ export type MenuItem = {
     item: {
       imgSrc: string;
       imgAlt: string;
+      imgSrcSet: string;
       title: string;
       information: string;
       type: string;

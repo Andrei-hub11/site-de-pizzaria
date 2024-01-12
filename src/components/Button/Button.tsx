@@ -22,13 +22,13 @@ function Button({ btn, children }: BtnProps) {
 
   const button: Variants = {
     primary: () => (
-      <a role="botão" onClick={onClick} className="btn primary">
+      <a role="button" onClick={onClick} className="btn primary">
         {children}
       </a>
     ),
     secondary: () => (
       <motion.a
-        role="botão"
+        role="button"
         onClick={(e) => {
           onClick && onClick(e);
           startAnimation();
@@ -40,17 +40,17 @@ function Button({ btn, children }: BtnProps) {
       </motion.a>
     ),
     tertiary: () => (
-      <a role="botão" onClick={onClick} className="btn tertiary">
+      <a role="button" onClick={onClick} className="btn tertiary">
         {children}
       </a>
     ),
     quaternary: () => (
-      <a role="botão" onClick={onClick} className="btn tertiary quaternary">
+      <a role="button" onClick={onClick} className="btn tertiary quaternary">
         {children}
       </a>
     ),
     quinary: () => (
-      <a role="botão" onClick={onClick} className="btn tertiary quinary">
+      <a role="button" onClick={onClick} className="btn tertiary quinary">
         {children}
       </a>
     ),

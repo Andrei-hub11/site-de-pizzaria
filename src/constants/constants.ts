@@ -12,11 +12,23 @@ import DeliveryIcon from "../assets/icons/carbon_delivery-parcel.svg";
 import OrderIcon from "../assets/icons/streamline_food-kitchenware-chef-toque-hat-cook-gear-chef-cooking-nutrition-tools-clothes-hat-clothing-food.svg";
 
 import CalabresaImage from "../assets/images/pizza_calabresa.webp";
+import CalabresaImage_Medium from "../assets/images/pizza_calabresa_medium.webp";
+import CalabresaImage_Small from "../assets/images/pizza_calabresa_small.webp";
 import MilhoImage from "../assets/images/pizza_milho.webp";
+import MilhoImage_Medium from "../assets/images/pizza_milho_medium.webp";
+import MilhoImage_Small from "../assets/images/pizza_milho_small.webp";
 import FrangoImage from "../assets/images/pizza_frango.webp";
+import FrangoImage_Medium from "../assets/images/pizza_frango_medium.webp";
+import FrangoImage_Small from "../assets/images/pizza_frango_small.webp";
 import QueijoImage from "../assets/images/pizza_queijo.webp";
+import QueijoImage_Medium from "../assets/images/pizza_queijo_medium.webp";
+import QueijoImage_Small from "../assets/images/pizza_queijo_small.webp";
 import AtumImage from "../assets/images/pizza_atum.webp";
+import AtumImage_Medium from "../assets/images/pizza_atum_medium.webp";
+import AtumImage_Small from "../assets/images/pizza_atum_small.webp";
 import HavaianaImage from "../assets/images/pizza_havaiana.webp";
+import HavaianaImage_Medium from "../assets/images/pizza_havaiana_medium.webp";
+import HavaianaImage_Small from "../assets/images/pizza_havaiana_small.webp";
 
 import PeopleIcon from "../assets/icons/icon-park-solid_people.svg";
 import DropIcon from "../assets/icons/formkit_down.svg";
@@ -28,8 +40,14 @@ import WhatsAppIcon from "../assets/icons/uil_whatsapp-alt.svg";
 import FacebookIcon from "../assets/icons/uil_facebook.svg";
 
 import PumpkinPieImage from "../assets/images/sliced-pumpkin-pie.webp";
+import PumpkinPieImage_Medium from "../assets/images/sliced-pumpkin-pie_medium.webp";
+import PumpkinPieImage_Small from "../assets/images/sliced-pumpkin-pie_small.webp";
 import SliceSachertorteCake from "../assets/images/fatia-de-bolo-sacher-com-geleia-de-damasco.webp";
+import SliceSachertorteCake_Medium from "../assets/images/fatia-de-bolo-sacher-com-geleia-de-damasco_medium.webp";
+import SliceSachertorteCake_Small from "../assets/images/fatia-de-bolo-sacher-com-geleia-de-damasco_small.webp";
 import RaspberryDrink from "../assets/images/bebida de framboesa.webp";
+import RaspberryDrink_Medium from "../assets/images/bebida_de_framboesa_medium.webp";
+import RaspberryDrink_Small from "../assets/images/bebida_de_framboesa_small.webp";
 
 import HomeIcon from "../assets/icons/ic_round-home.svg";
 import FeaturesIcon from "../assets/icons/eos-icons_service-instance.svg";
@@ -135,6 +153,7 @@ export const specialOptions: SpecialMenu[] = [
     id: "b7f142ae-78b9-4f1d-a63b-0e5d6f61a820",
     imgSrc: PumpkinPieImage,
     imgAlt: "imagem da torta de aboborá",
+    imgSrcSet: `${PumpkinPieImage_Small} 600w, ${PumpkinPieImage_Medium} 900w, ${PumpkinPieImage} 1200w`,
     title: "Torta de Aboborá",
     information:
       "Um deleite reconfortante que une a doçura suave da abóbora com especiarias acolhedoras.",
@@ -148,6 +167,7 @@ export const specialOptions: SpecialMenu[] = [
     id: "b7f142ae-78b9-4f1d-a63b-0e5d6f61a829",
     imgSrc: SliceSachertorteCake,
     imgAlt: "imagem de fatia de bolo Sachertorte",
+    imgSrcSet: `${SliceSachertorteCake_Small} 600w, ${SliceSachertorteCake_Medium} 900w, ${SliceSachertorteCake} 1200w`,
     title: "Fatia de Bolo Sachertorte",
     information:
       "Com camadas densas de bolo de chocolate, é recheado com geleia e coberto por uma fina camada de chocolate amargo. ",
@@ -164,6 +184,7 @@ export const drinkOptions: DrinksMenu[] = [
     id: "98a52b7d-6f2e-4e6b-bc0c-7a4f1c9d81a2",
     imgSrc: RaspberryDrink,
     imgAlt: "imagem da bebida de framboesa",
+    imgSrcSet: `${RaspberryDrink_Small} 600w, ${RaspberryDrink_Medium} 900w, ${RaspberryDrink} 1200w`,
     title: "Refrigerante Framboesa",
     information:
       "uma refrescante mistura que combina o sabor vibrante e doce das framboesas com o efervescente e refrescante",
@@ -182,6 +203,7 @@ export const menuOptions: MenuItem[] = [
       item: {
         imgSrc: CalabresaImage,
         imgAlt: "imagem da pizza de calabresa",
+        imgSrcSet: `${CalabresaImage_Small} 600w, ${CalabresaImage_Medium} 900w, ${CalabresaImage} 1200w`,
         title: "Pizza de Calabresa",
         information:
           "Deliciosa Pizza de Calabresa: Sabor autêntico, massa crocante e ingredientes frescos. Peça agora!",
@@ -211,6 +233,7 @@ export const menuOptions: MenuItem[] = [
       item: {
         imgSrc: MilhoImage,
         imgAlt: "imagem da pizza de milho",
+        imgSrcSet: `${MilhoImage_Small} 600w, ${MilhoImage_Medium} 900w, ${MilhoImage} 1200w`,
         title: "Pizza de Milho",
         information:
           "Pizza de Milho com Presunto: Um equilíbrio perfeito de doçura do milho e o sabor defumado do presunto fatiado.",
@@ -240,6 +263,7 @@ export const menuOptions: MenuItem[] = [
       item: {
         imgSrc: FrangoImage,
         imgAlt: "imagem da pizza de frango",
+        imgSrcSet: `${FrangoImage_Small} 600w, ${FrangoImage_Medium} 900w, ${FrangoImage} 1200w`,
         title: "Pizza de Frango",
         information:
           "Pizza de Frango: Ternos pedaços de frango e temperos deliciosos em cada fatia. Uma escolha irresistível!",
@@ -275,6 +299,7 @@ export const menuOptions: MenuItem[] = [
       item: {
         imgSrc: QueijoImage,
         imgAlt: "imagem da pizza de queijo",
+        imgSrcSet: `${QueijoImage_Small} 600w, ${QueijoImage_Medium} 900w, ${QueijoImage} 1200w`,
         title: "Pizza de Queijo",
         information:
           "Clássica Pizza de Queijo: Uma indulgência de queijo derretido sobre uma massa crocante.",
@@ -309,6 +334,7 @@ export const menuOptions: MenuItem[] = [
       item: {
         imgSrc: AtumImage,
         imgAlt: "imagem da pizza de atum",
+        imgSrcSet: `${AtumImage_Small} 600w, ${AtumImage_Medium} 900w, ${AtumImage} 1200w`,
         title: "Pizza de Queijo",
         type: "pizza",
         information:
@@ -344,6 +370,7 @@ export const menuOptions: MenuItem[] = [
       item: {
         imgSrc: HavaianaImage,
         imgAlt: "imagem da pizza havaiana",
+        imgSrcSet: `${HavaianaImage_Small} 600w, ${HavaianaImage_Medium} 900w, ${HavaianaImage} 1200w`,
         title: "Pizza Havaiana",
         type: "pizza",
         information:

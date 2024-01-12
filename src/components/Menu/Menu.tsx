@@ -69,6 +69,7 @@ function Menu() {
                       <img
                         src={front.item.imgSrc}
                         alt={front.item.imgAlt}
+                        srcSet={front.item.imgSrcSet}
                         width="1500"
                         height="1000"
                         loading="lazy"
@@ -92,6 +93,7 @@ function Menu() {
                               name: front.item.title,
                               type: front.item.type,
                               image: front.item.imgSrc,
+                              imageSrcSet: front.item.imgSrcSet,
                               price: 32,
                               quantity: 1,
                             });
@@ -117,7 +119,11 @@ function Menu() {
                 </div>
 
                 <div className="menu__back">
-                  <div className="menu__back__card">
+                  <div
+                    className={` menu__back__card  ${
+                      isFront[front.id] ? "" : "menu--invisible"
+                    }`}
+                  >
                     <h3 className="menu__front-title back__title--variant">
                       {card.title}
                     </h3>
@@ -172,6 +178,7 @@ function Menu() {
                               name: special.title,
                               type: special.type,
                               image: special.imgSrc,
+                              imageSrcSet: special.imgSrcSet,
                               price: special.price,
                               quantity: 1,
                             });
@@ -215,6 +222,7 @@ function Menu() {
                               name: drinks.title,
                               type: drinks.type,
                               image: drinks.imgSrc,
+                              imageSrcSet: drinks.imgSrcSet,
                               price: drinks.price,
                               quantity: 1,
                             });

@@ -3,12 +3,15 @@
 
 .location {
   @include for-size(smaller-phone) {
-    margin: 0 auto;
-    width: 320px; /* same size as frame */
-    height: 168px;
-    -ms-zoom: 2.25; /* for IE 8 ONLY */
-    padding: 0;
+    margin-top: 6rem;
     overflow: hidden;
+    &__frame {
+      margin: 2rem auto;
+      width: 320px; /* same size as frame */
+      height: 168px;
+      padding: 0;
+      overflow: hidden;
+    }
 
     iframe {
       width: 320px;
@@ -19,8 +22,10 @@
   }
 
   @include for-size(phone-only) {
-    width: 420px;
-    height: 268px;
+    &__frame {
+      width: 420px;
+      height: 268px;
+    }
 
     iframe {
       width: 420px;
@@ -29,10 +34,12 @@
   }
 
   @include for-size(tablet-landscape-up) {
-    position: relative;
-    width: 100%; /* Ajuste a largura conforme necessário */
-    max-width: 800px;
-    padding-bottom: 56.25%;
+    &__frame {
+      position: relative;
+      width: 100%; /* Ajuste a largura conforme necessário */
+      max-width: 800px;
+      padding-bottom: 56.25%;
+    }
 
     iframe {
       position: absolute;
@@ -43,7 +50,9 @@
   }
 
   @include for-size(desktop-up) {
-    max-width: 900px;
-    padding-bottom: 35%;
+    &__frame {
+      max-width: 900px;
+      padding-bottom: 35%;
+    }
   }
 }

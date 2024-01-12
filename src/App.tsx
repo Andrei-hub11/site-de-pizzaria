@@ -1,11 +1,13 @@
-import About from "./components/About/About";
-import Features from "./components/Features/Features";
+import { lazy } from "react";
+
 import Home from "./components/Home/Home";
-import Location from "./components/Location/Location";
+import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+import Features from "./components/Features/Features";
 import Menu from "./components/Menu/Menu";
 import Navbottom from "./components/Navbottom/Navbottom";
 import Reserve from "./components/Reserve/Reserve";
-import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
+import About from "./components/About/About";
+const Location = lazy(() => import("./components/Location/Location"));
 
 function App() {
   return (

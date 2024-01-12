@@ -1,6 +1,8 @@
 import "./_About.scss";
 
 import AboutImage from "../../assets/images/jovem-cozinheiro.webp";
+import AboutImage_Medium from "../../assets/images/jovem-cozinheiro_medium.webp";
+import AboutImage_Small from "../../assets/images/jovem-cozinheiro_small.webp";
 
 function About() {
   return (
@@ -9,9 +11,10 @@ function About() {
         <div className="about__container-img">
           <img
             src={AboutImage}
+            srcSet={`${AboutImage_Small} 600w, ${AboutImage_Medium} 900w, ${AboutImage} 1200w`}
             alt="imagem da seção sobre"
             width="1500"
-            height="1000"
+            height="1058"
             loading="lazy"
           />
         </div>

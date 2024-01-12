@@ -138,9 +138,17 @@
 
   @include for-size(tablet-portrait-up) {
     &__options {
-      align-items: flex-start;
-      justify-content: center;
-      column-gap: 8rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+
+  @include for-size(desktop-up) {
+    &__options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
     }
   }
 }
@@ -321,6 +329,10 @@
         color: $primary-color;
       }
     }
+  }
+
+  .menu--invisible {
+    display: none;
   }
 
   @include for-size(medium-phone) {

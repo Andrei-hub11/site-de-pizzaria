@@ -38,6 +38,7 @@
 
 .tertiary {
   @include for-size(smaller-phone) {
+    text-transform: uppercase;
     padding: 0.8rem 1.4rem;
     border-radius: 0.5rem;
     color: $text-color;
