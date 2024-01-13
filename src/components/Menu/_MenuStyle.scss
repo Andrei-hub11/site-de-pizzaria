@@ -283,9 +283,14 @@
   }
 
   @include for-size(tablet-portrait-up) {
+    bottom: 4.5rem;
     &-price {
       font-size: 1.5rem;
       font-family: $primary-font;
+    }
+
+    &-information {
+      font-size: 1.5rem;
     }
   }
 }

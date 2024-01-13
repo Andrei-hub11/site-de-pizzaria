@@ -34,6 +34,10 @@
   @include for-size(medium-phone) {
     padding: 0.2rem 1.4rem;
   }
+
+  @include for-size(tablet-landscape-up) {
+    padding: 0.4rem 2.4rem;
+  }
 }
 
 .tertiary {
