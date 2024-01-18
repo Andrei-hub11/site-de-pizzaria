@@ -11,18 +11,19 @@
 
     &__container {
       display: flex;
+      flex-direction: column;
       gap: 1.5rem;
     }
 
     &__container-img {
-      width: 16.3rem;
-      height: 11.8rem;
+      width: 21.5rem;
+      height: 15.6rem;
       background: $primary-color;
       border-radius: 2rem 0 2rem 0;
 
       & img {
-        width: 16.3rem;
-        height: 11.8rem;
+        width: 21.5rem;
+        height: 15.6rem;
         object-fit: cover;
         border-radius: 2rem 0 2rem 0;
       }
@@ -40,8 +41,8 @@
 
     &__text {
       font-family: $primary-font;
-      font-size: 1rem;
-      width: 16.8rem;
+      font-size: 1.4rem;
+      width: 23rem;
     }
   }
 
@@ -73,6 +74,7 @@
 
   @include for-size(tablet-portrait-up) {
     &__container {
+      flex-direction: unset;
       gap: 3rem;
     }
 

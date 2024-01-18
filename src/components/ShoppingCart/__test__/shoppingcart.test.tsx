@@ -35,11 +35,11 @@ describe("ShoppingCart component", () => {
     userEvent.click(document.body);
 
     const cartContainer = screen.getByTestId("car");
-    const iconCart = screen.getByTestId("cart-icon");
+    const cartIcon = screen.getByTestId("cart-icon");
 
     expect(cartContainer).toHaveClass("cart", { exact: true });
 
-    userEvent.click(iconCart);
+    userEvent.click(cartIcon);
 
     await waitFor(() => {
       expect(cartContainer).toHaveStyle({

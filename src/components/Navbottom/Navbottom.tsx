@@ -28,6 +28,7 @@ function Navbottom() {
               alt={icon.alt}
               data-testid={`${icon.path === "car" ? "cart-icon" : ""}`}
               id={`${icon.path === "car" ? "cartIcon" : ""}`}
+              role="button"
               onClick={() => (icon.path === "car" ? toggleCartMenu() : null)}
               width="24"
               height="24"

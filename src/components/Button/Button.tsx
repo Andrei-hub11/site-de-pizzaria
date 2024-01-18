@@ -22,12 +22,18 @@ function Button({ btn, children }: BtnProps) {
 
   const button: Variants = {
     primary: () => (
-      <a role="button" onClick={onClick} className="btn primary">
+      <a
+        href="javascript:void(0)"
+        role="button"
+        onClick={onClick}
+        className="btn primary"
+      >
         {children}
       </a>
     ),
     secondary: () => (
       <motion.a
+        href="javascript:void(0)"
         role="button"
         onClick={(e) => {
           onClick && onClick(e);
@@ -40,17 +46,32 @@ function Button({ btn, children }: BtnProps) {
       </motion.a>
     ),
     tertiary: () => (
-      <a role="button" onClick={onClick} className="btn tertiary">
+      <a
+        href="javascript:void(0)"
+        role="button"
+        onClick={onClick}
+        className="btn tertiary"
+      >
         {children}
       </a>
     ),
     quaternary: () => (
-      <a role="button" onClick={onClick} className="btn tertiary quaternary">
+      <a
+        href="javascript:void(0)"
+        role="button"
+        onClick={onClick}
+        className="btn tertiary quaternary"
+      >
         {children}
       </a>
     ),
     quinary: () => (
-      <a role="button" onClick={onClick} className="btn tertiary quinary">
+      <a
+        href="javascript:void(0)"
+        role="button"
+        onClick={onClick}
+        className="btn tertiary quinary"
+      >
         {children}
       </a>
     ),

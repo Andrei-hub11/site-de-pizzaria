@@ -13,7 +13,7 @@ interface CartState {
   removeFromCart: (productId: string) => void;
   incrementQuantity: (productId: string, quantity: number) => void;
   decrementQuantity: (productId: string, quantity: number) => void;
-  startDropdwon: (productId: string) => void;
+  startDropdown: (productId: string) => void;
   updateDropdown: (productId: string, sizeSelected: string) => void;
   updatePrice: (productId: string, sizeSelected: string) => void;
 }
@@ -61,7 +61,7 @@ const useCartStore = create<CartState>((set) => ({
         products: updatedProducts,
       };
     }),
-  startDropdwon: (productId) =>
+  startDropdown: (productId) =>
     set((state) => ({
       dropdown: [...state.dropdown, { id: productId, sizeSelected: "G" }],
     })),
