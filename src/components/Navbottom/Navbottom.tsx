@@ -26,6 +26,7 @@ function Navbottom() {
             <img
               src={icon.src}
               alt={icon.alt}
+              data-testid={`${icon.path === "car" ? "cart-icon" : ""}`}
               id={`${icon.path === "car" ? "cartIcon" : ""}`}
               onClick={() => (icon.path === "car" ? toggleCartMenu() : null)}
               width="24"

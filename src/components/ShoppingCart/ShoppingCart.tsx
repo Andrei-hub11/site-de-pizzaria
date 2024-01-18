@@ -26,6 +26,7 @@ function ShoppingCart() {
       ref={menuRef}
       className="cart"
       id="car"
+      data-testid="car"
       initial={{ y: "-100%" }}
       animate={{ y: isOpen ? "0%" : "-100%" }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
